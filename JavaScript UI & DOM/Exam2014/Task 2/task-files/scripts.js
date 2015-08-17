@@ -5,9 +5,6 @@ $.fn.gallery = function (cols) {
 
     var $gallery = $(this).addClass('gallery'),
         columns = cols || 4;
-    // $images = $gallery.find(".image-container")
-    //     .width(($gallery.width() / columns) - 12)
-    //     .height(($gallery.width() / columns) - 12);
 
     var $imageContainer = $gallery.find('.image-container');
 
@@ -133,11 +130,5 @@ $.fn.gallery = function (cols) {
         $gallery.find(".next-image").html($newNext);
     }
 
-
     return this;
 };
-
-
-//function solve(){
-//
-//};
