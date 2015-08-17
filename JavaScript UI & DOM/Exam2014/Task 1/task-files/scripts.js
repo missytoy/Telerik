@@ -102,14 +102,11 @@ function createImagesPreviewer(containerID, animals) {
 
     searchBar.addEventListener("keyup", function () {
 
-        var jivotni = document.querySelectorAll("li");
+        var allAnimalsLi = document.querySelectorAll("li");
 
-        // console.log(jivotni[1]);
-        // console.log(this.value);
+        for (var i = 0; i < allAnimalsLi.length; i++) {
 
-        for (var i = 0; i < jivotni.length; i++) {
-
-            var currentAnimal = jivotni[i],
+            var currentAnimal = allAnimalsLi[i],
                 currentAnimalName = currentAnimal.firstChild.innerHTML.toLowerCase();
 
             if (currentAnimalName.indexOf(this.value.toLowerCase()) < 0) {
@@ -132,12 +129,3 @@ function createImagesPreviewer(containerID, animals) {
 
     // return container;
 }
-
-//var fragment =document.createDocumentFragment();
-//fragment.appendChild();
-
-//if(target.tagName === "IMG")
-
-//if(typeof element === "string"){
-//    element = document.getElementById(element);
-//}
